@@ -75,7 +75,57 @@
                     <!--Billede insættet i scss-->
                 </div>
             </section>
+            <section class="kontakt-bg-img">
+                <form class="kontaktform">
+                    <h3>Kontakt os</h3>
+                    <p>Kontakt os nedenfor for et uforbligtende tilbud.</p>
+                    <div class="section-form">
+                        <label class="visually-hidden" for="navn">Navn</label>
+                        <input id="navn" type="text" placeholder="Navn" required>
+
+                        <label class="visually-hidden" for="mial">E-mail</label>
+                        <input id="mail" type="email" placeholder="E-mail" required>
+                    </div>
+                    <div class="section-form">
+                        <label class="visually-hidden" for="telefon">Telefon</label>
+                        <input id="telefon" type="tel" placeholder="Telefon">
+
+                        <label class="visually-hidden" for="region">Vælg region</label>
+                        <select name="region" id="region">
+                            <option value="0" selected disabled>Vælg region</option>
+                            <option value="1">Region Syddanmark</option>
+                            <option value="2">Region Sjælland</option>
+                            <option value="3">Region Hovedstaden</option>
+                            <option value="4">Region Nordjylland</option>
+                            <option value="5">Region Midtjylland</option>
+                        </select>
+                    </div>
+                    <div class="section-form">
+                        <label class="visually-hidden" for="besked">Besked</label>
+                        <textarea id="besked" rows="8"></textarea>
+                    </div>
+                    <div class="section-form">
+                        <input type="submit" name="submit" value="Send besked">
+                </form>
+            </section>
         </main>
+        <!--Footer-->
+        <footer>
+            <section class="">
+                <h4>Info</h4>
+                <p>Blanding.co</p>
+                <p>Klassedammen 1</p>
+                <p>6755 Søby</p>
+                <p>Tlf.: <a href="tel:25456545">25 45 65 45</a></p>
+                <p>CVR: 2343 2323</p>
+            </section>
+            <section>
+                <!--footer right (Mangler)-->
+            </section>
+        </footer>
+        <footer>
+            <p class="footer-bund">Blanding.co</p>
+        </footer>
     </div>
 </body>
 </html>
