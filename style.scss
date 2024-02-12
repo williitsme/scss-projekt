@@ -64,11 +64,65 @@ nav{
             font-weight: bold;
             text-decoration: none;
 
-            &hover{
+            &:hover{
                 color: partial.$primary-color;
             }
         }
 
         //a:hover
+        a:hover{
+            color: partial.$primary-color;
+        }
         
+}
+
+.mobile-nav{
+    .bars{
+        display: none;
+        cursor: pointer;
+    }
+}
+
+.toggleShow{
+    display: flex;
+    flex-direction: column;
+}
+
+.active{
+    color: partial.$primary-color;
+}
+
+//Header Billede
+
+.header-img{
+    position: relative;
+    margin-bottom: 1em;
+
+        .banner-tekst{
+            position: absolute;
+            top: 25%;
+            left: 5%;
+        }
+
+        h1{
+            font-size: 3.5vw;
+        }
+
+        p{
+            font-size: 2vw;
+        }
+
+        a{
+            @include partial.btn;
+            position:absolute;
+
+            &:hover{
+                background-color: partial.$secondary-color;
+                transition: 0.3s ease-in-out;
+            }
+        }
+}
+
+.bg-billede-mobil{
+    display: none;
 }

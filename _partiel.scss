@@ -15,3 +15,11 @@ $padding: o.5em;
     justify-content: $justify;
     align-items: $align;
 }
+
+@mixin btn($bg-color:$primary-color, $btn-padding: 0.8em 1em){
+    background-color: $bg-color;
+    padding: $btn-padding;
+    color: #fff
+    text-decoration: none;
+
+}
