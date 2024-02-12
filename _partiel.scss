@@ -6,3 +6,12 @@ $primary-color: #3a8479;
 $secondary-color: #133833;
 $txt-color: #484848;
 $font: 'segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+
+//Mixins
+
+@mixin flex($justify:center,$align:center){
+    display:flex;
+    justify-content: $justify;
+    align-items: $align;
+}
