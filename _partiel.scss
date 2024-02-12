@@ -19,7 +19,7 @@ $padding: o.5em;
 @mixin btn($bg-color:$primary-color, $btn-padding: 0.8em 1em){
     background-color: $bg-color;
     padding: $btn-padding;
-    color: #fff
+    color: #fff;
     text-decoration: none;
 
 }
