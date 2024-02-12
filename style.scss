@@ -38,5 +38,37 @@ img{
 
 header{
     grid-column: 1/6;
+    @include parial.flex($justify: space-between);
+    background-color: partial.$nav-color;
+    border-bottom: 4px solid partial.$primary-color;
+}
+
+nav{
+    height: 4em;
+    padding: 1em;
+    @include parial.flex($justify: space-between);
     
+        img{
+            width: 70px;
+        }
+
+        ul{
+            @include parial.flex;
+            list-style-type: none;
+        }
+
+        a{
+            color: partial.$txt-color;
+            padding: partial.$padding;
+            margin: partial.$padding;
+            font-weight: bold;
+            text-decoration: none;
+
+            &hover{
+                color: partial.$primary-color;
+            }
+        }
+
+        //a:hover
+        
 }
