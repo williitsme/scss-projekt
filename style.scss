@@ -9,11 +9,11 @@ padding: 0;
 
 body{
 font-family: partial.$font;
-background-color: parial.$bg-color;
+background-color: partial.$bg-color;
 
     p{
         font-size: 16px;
-        color: $txt-color;
+        color: partial.$txt-color;
         line-height: 1.5;
     }
 
@@ -38,7 +38,7 @@ img{
 
 header{
     grid-column: 1/6;
-    @include parial.flex($justify: space-between);
+    @include partial.flex($justify: space-between);
     background-color: partial.$nav-color;
     border-bottom: 4px solid partial.$primary-color;
 }
@@ -46,14 +46,14 @@ header{
 nav{
     height: 4em;
     padding: 1em;
-    @include parial.flex($justify: space-between);
+    @include partial.flex($justify: space-between);
     
         img{
             width: 70px;
         }
 
         ul{
-            @include parial.flex;
+            @include partial.flex;
             list-style-type: none;
         }
 
@@ -126,3 +126,158 @@ nav{
 .bg-billede-mobil{
     display: none;
 }
+
+//Forside
+main{
+    grid-column: 1/6;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+        h2{
+            grid-column: 1/7;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .cta-wrapper{
+            grid-column: 1/7;
+            display: flex;
+            justify-content: space-around;
+        }
+}
+
+/* CTA bokse */
+.cta-1, .cta-2, .cta-3{
+    @include partial.cta-box;
+    
+        img{
+            margin: 0 auto;
+            width: 60%;
+            display: block;
+        }
+
+        p{
+            margin-bottom: 2em;
+        }
+
+        a{
+            @include partial.btn;
+            display:block;
+
+            &:hover{
+                background-color: partial.$secondary-color;
+                transition: 0.4s ease-in-out;
+            }
+        }
+}
+
+.txt-img-section{
+    grid-column: 1/7;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.tekst{
+    grid-column: 1/5;
+    background-color: partial.$secondary-color;
+    padding: 2em 4em 4em 4em;
+
+        p{
+            color: partial.$bg-color;
+        }
+
+        p:nth-of-type(4){
+            margin-bottom: 3em;
+        }
+
+        h2{
+            color: partial.$bg-color;
+            text-align: left;
+        }
+
+}
+
+.secondary-btn{
+    @include partial.btn($bg-color: transparent);
+    border: 1px solid white;
+    
+        &:hover{
+            background-color: #FFF;
+            color: partial.$secondary-color;
+            transition: 0.4s ease-in-out;
+        }
+    }
+
+.billede{
+    grid-column: 5/8;
+    background-image: url(img/presentation.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.kontakt-bg-img{
+    grid-column: 1/7;
+    background: linear-gradient(rgba(142, 142, 142, 0.8), rgba(142, 142, 142, 0.8)), url(img/meeting);
+    background-size: cover;
+}
+
+.kontaktform{
+    background-color: partial.$bg-color;
+    border-radius: 5px;
+    padding: 1.3em;
+    width: 50%;
+    margin: 4em auto;
+
+        h3{
+            font-size: 25px;
+            margin-bottom: 0;
+            margin-left: 0.5em;
+        }
+
+        p{
+            margin-left: 1em;
+        }
+}
+
+.section-form{
+    display: flex;
+}
+
+input[type=text], input[type=email], input[type=tel], select, textarea{
+    width: 100%;
+    font-size: 15px;
+    padding: 1em;
+    border-radius: 4px;
+    border: 1px solid partial.$secondary-color;
+    box-sizing: border-box;
+    margin: 0.5em 1em 1em 1em;
+    font-family: partial.$font;
+}
+
+input[type=submit]{
+    @include partial.btn;
+    font-size: 15px;
+    border: none;
+    width: 100%;
+    margin: 0 1em;
+    cursor: pointer;
+
+        &:hover{
+            background-color: partial.$secondary-color;
+            transition: 0.4s ease-in-out;
+        }
+}
+
+.visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+  }
+
+
+
